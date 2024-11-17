@@ -91,14 +91,14 @@ CREATE FUNCTION DivideQuantity(a FLOAT, b FLOAT)
 RETURNS FLOAT
 DETERMINISTIC
 BEGIN
-	DECLARE result FLOAT;
+    DECLARE result FLOAT;
 
-	IF b = 0 THEN
-		RETURN NULL;
+    IF b = 0 THEN
+       RETURN NULL;
     ELSEIF b IS NULL THEN
-		SET b = 1.0;
-	END IF;
-		SET result = a / b;
+	SET b = 1.0;
+    END IF;
+	SET result = a / b;
 
     RETURN result;
 END//
